@@ -20,17 +20,19 @@ const Header = () => {
           />
         </div>
         {/* Login/Register */}
-        <div>
+        <div className="headerDiv cursor-pointer">
           {" "}
           <AiOutlineUser className="text-2xl" />
           <p className="text-sm font-semibold">Login</p>
         </div>
-        <div>
+        <div className="headerDiv px-2 gap-x-1 cursor-pointer">
           {" "}
           <FiLogOut className="text-2xl" />
           <p className="text-sm font-semibold">Logout</p>
         </div>
-        <IoMdCart className="text-xl" />
+        <div className="bg-black hover:bg-slate-950 rounded-full text-slate-100 hover:text-white flex items-center justify-center gap-x-1 px-3 py-1.5 border-[1px] border-black hover:border-orange-600 duration-200 relative">
+          <IoMdCart className="text-xl" />
+        </div>
       </Container>
     </div>
   );
