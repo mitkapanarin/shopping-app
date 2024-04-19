@@ -32,6 +32,10 @@ const Header = () => {
         </div>
         <div className="bg-black hover:bg-slate-950 rounded-full text-slate-100 hover:text-white flex items-center justify-center gap-x-1 px-3 py-1.5 border-[1px] border-black hover:border-orange-600 duration-200 relative">
           <IoMdCart className="text-xl" />
+          <p className="text-sm font-semibold">$0,00</p>
+          <span className="bg-white text-orange-600 rounded-full text-xs font-semibold absolute -right-2 -top-1 w-5 h-5 flex items-center justify-center shadow-xl shadow-black">
+            0
+          </span>
         </div>
       </Container>
     </div>
