@@ -6,6 +6,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import Container from "./Container";
 import Logo from "./Logo";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Image from "next/image";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -30,7 +31,16 @@ const Header = () => {
             <p className="text-sm font-semibold">Login/Register</p>
           </div>
         )}
-
+        {/* user Image */}
+        {session && (
+          <Image
+            src={session?.user?.image as string}
+            alt="user image"
+            width={50}
+            height={50}
+            className="rounded-full object-cover"
+          />
+        )}
         {session && (
           <div
             onClick={() => signOut()}
